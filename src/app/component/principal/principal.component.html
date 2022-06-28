@@ -1,0 +1,91 @@
+<!-- banner slider de imagenes -->
+<div id="banner" class="d-flex justify-content-center">
+    <ngb-carousel *ngIf="imagesBanner">
+        <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+                <img [src]="imagesBanner[0]" alt="banner-1">
+            </div>
+        </ng-template>
+        <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+                <img [src]="imagesBanner[1]" alt="banner-2">
+            </div>
+        </ng-template>
+        <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+                <img [src]="imagesBanner[2]" alt="banner-3">
+            </div>
+        </ng-template>
+        <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+                <img [src]="imagesBanner[3]" alt="banner-4">
+            </div>
+        </ng-template>
+        <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+                <img [src]="imagesBanner[4]" alt="banner-5">
+            </div>
+        </ng-template>
+    </ngb-carousel>
+</div>
+
+<!-- seccion de productos -->
+<section id="productos" class="container">
+
+    <div class="tituloSeccion">
+        <h1 class="d-inline fs-3 text-secondary fw-light" *ngIf="busqueda != ''">{{busqueda}}</h1>
+        <h1 class="d-inline fs-3 text-secondary fw-light" *ngIf="busqueda == ''">Basado en tu ultima visita</h1>
+        <a href="#" class="text-decoration-none ms-2">Ver historial</a>
+    </div>
+    <div class="productos d-flex justify-content-center mb-5">
+        <mat-card class="example-card rounded m-2" *ngFor="let p of datosProductos.ultimaVisita"
+            routerLink="/descripcion/{{p.id}}"
+            (click)="mostrarDetalle(p.id, p.titulo, p.precio, p.tipoEnvio, p.imagen)">
+            <img class=" pb-1 border-bottom" mat-card-image src={{p.imagen}} alt="nro {{p.id}} - {{p.titulo}}">
+            <mat-card-content>
+                <h2 class=" m-0 fs-4 fw-normal">U$S {{p.precio}}</h2>
+                <h5 class="m-0 text-success" *ngIf="p.tipoEnvio">Envio Gratis</h5>
+                <div class="descripcion">
+                    <p class="text-secondary">{{p.titulo}}</p>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+
+    <div class="tituloSeccion">
+        <h1 class="d-inline fs-3 text-secondary fw-light">Relacionado con tus visitas en Accesorios para Vehículos</h1>
+        <a href="#" class="text-decoration-none ms-2">Ver historial</a>
+    </div>
+    <div class="productos d-flex justify-content-center mb-5">
+        <mat-card class="example-card rounded m-2" *ngFor="let p of datosProductos.relacionVehiculos"
+            routerLink="/descripcion/{{p.id}}">
+            <img class=" pb-1 border-bottom" mat-card-image src={{p.imagen}} alt="nro {{p.id}} - {{p.titulo}}">
+            <mat-card-content>
+                <h2 class=" m-0 fs-4 fw-normal">U$S {{p.precio}}</h2>
+                <h5 class="m-0 text-success" *ngIf="p.tipoEnvio">Envio Gratis</h5>
+                <div class="descripcion">
+                    <p class="text-secondary">{{p.titulo}}</p>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+
+    <div class="tituloSeccion">
+        <h1 class="d-inline fs-3 text-secondary fw-light">Relacionado con tus visitas en Computación</h1>
+        <a href="#" class="text-decoration-none ms-2">Ver historial</a>
+    </div>
+    <div class="productos d-flex justify-content-center mb-5">
+        <mat-card class="example-card rounded m-2" *ngFor="let p of datosProductos.relacionComputacion"
+            routerLink="/descripcion/{{p.id}}">
+            <img class=" pb-1 border-bottom" mat-card-image src={{p.imagen}} alt="nro {{p.id}} - {{p.titulo}}">
+            <mat-card-content>
+                <h2 class=" m-0 fs-4 fw-normal">U$S {{p.precio}}</h2>
+                <h5 class="m-0 text-success" *ngIf="p.tipoEnvio">Envio Gratis</h5>
+                <div class="descripcion">
+                    <p class="text-secondary">{{p.titulo}}</p>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+
+</section>

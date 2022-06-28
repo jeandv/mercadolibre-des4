@@ -1,0 +1,347 @@
+.side-note-wrapper {
+    max-width: 72rem;
+    margin: 0 auto;
+}
+
+.side-note {
+    font: 100 12px Proxima Nova, -apple-system, Helvetica Neue, Helvetica, Roboto,
+        Arial, sans-serif;
+}
+
+.extra-links {
+    margin-top: 80px;
+    background-color: white;
+    border-top: 1px solid rgb(192, 192, 192);
+    border-bottom: 1px solid;
+    border-bottom-color: rgba(192, 192, 192, 0);
+    transition-property: border-bottom-color;
+    transition-duration: 1s;
+}
+
+.extra-links-switch {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.mas-info {
+    border: 1px solid rgb(192, 192, 192);
+    border-radius: 5px 5px 0 0;
+    border-bottom: 0;
+    height: 32px;
+    font: 500 12px Proxima Nova, -apple-system, Helvetica Neue, Helvetica, Roboto,
+        Arial, sans-serif;
+    line-height: 1;
+    padding: 10px 15px;
+    top: -32px;
+    position: absolute;
+    background-color: white;
+}
+
+.mas-info-icon {
+    transform: rotate(180deg);
+    transition-property: transform;
+    transition-duration: 0.5s;
+}
+
+.extra-links-cont {
+    margin: 0 auto;
+    display: flex;
+    max-width: 72rem;
+    padding: 0px 110px;
+    justify-content: space-between;
+    height: auto;
+    max-height: 1px;
+    transition-property: max-height;
+    transition-duration: 1s;
+    overflow: hidden;
+}
+
+.extra-links:hover {
+    border-bottom-color: rgb(192, 192, 192);
+}
+
+.extra-links:hover .mas-info-icon {
+    transform: rotate(0deg);
+}
+
+.extra-links-switch:hover~.extra-links-cont {
+    max-height: 400px;
+}
+
+.extra-links-cont:hover {
+    max-height: 400px;
+}
+
+.extra-links-col {
+    padding: 40px 0;
+}
+
+.extra-links-col-title {
+    font: bold 14px Proxima Nova, -apple-system, Helvetica Neue, Helvetica, Roboto,
+        Arial, sans-serif;
+    color: rgb(0, 0, 0);
+    margin: 20px 0;
+}
+
+.extra-links-col-link {
+    font: bold 14px Proxima Nova, -apple-system, Helvetica Neue, Helvetica, Roboto,
+        Arial, sans-serif;
+    color: rgb(109, 109, 109);
+}
+
+footer {
+    background-color: white;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 20px 0;
+}
+
+.footer-link-wrapper {
+    max-width: 72rem;
+    margin: 0 auto;
+    display: flex;
+}
+
+.footer-link+.footer-link {
+    margin-left: 20px;
+}
+
+.footer-data-wrapper {
+    color: rgb(139, 139, 139);
+    max-width: 72rem;
+    margin: 10px auto 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.app-link {
+    visibility: hidden;
+    position: absolute;
+}
+
+@media only screen and (max-width: 1024px) {
+    .only-mobile {
+        visibility: visible;
+        position: static;
+    }
+
+    .only-pc {
+        visibility: hidden;
+        position: absolute;
+    }
+
+    #header-nav,
+    main {
+        padding: 0 10px;
+    }
+
+    #nav-logo {
+        background-image: url("/img/logo_small.png");
+        min-width: 44px;
+        height: 32px;
+        align-self: center;
+        flex: 0;
+        margin-right: 5px;
+    }
+
+    #mercado-puntos {
+        visibility: hidden;
+        position: absolute;
+    }
+
+    #user {
+        flex: 3;
+    }
+
+    #sections {
+        visibility: hidden;
+        position: absolute;
+    }
+
+    #carrito-icon {
+        margin-right: 5px;
+    }
+
+    .slides>div {
+        height: 200px;
+    }
+
+    h2.title {
+        margin-top: 20px;
+    }
+
+    .descuentazos {
+        visibility: hidden;
+        position: absolute;
+    }
+
+    /*
+
+  .descuentazos {
+    flex-wrap: wrap;
+  }
+  
+  .descuentazos>a{
+    margin: 2px 0;
+  }
+
+  .descuentazos>a:nth-child(4){
+    visibility: hidden;
+    position: relative;
+    flex-basis: 100%;
+  }
+
+  */
+
+    #ofertas-grid-1 {
+        margin-top: 20px;
+    }
+
+    .element-small-size {
+        height: auto;
+    }
+
+    .element-s-cont.extended-cont {
+        margin: 20px 0 12px;
+        padding: 0 20px;
+        width: 100%;
+        height: auto;
+    }
+
+    .element-s-img.extended-img {
+        height: 100px;
+    }
+
+    .element-small-size.extended-element>a {
+        display: block;
+    }
+
+    .element-medium-size {
+        height: 236px;
+    }
+
+    .element-small-size.extended-element>a>div:nth-child(2) {
+        display: block;
+        flex-direction: default;
+        justify-content: default;
+    }
+
+    .element-small-size.extended-element>a>div:nth-child(2)>div {
+        text-align: center;
+    }
+
+    .element-small-size.extended-element>a>div:nth-child(2)>div>h3 {
+        margin: 0;
+        line-height: 1;
+        font-size: 24px;
+    }
+
+    .element-small-size.extended-element>a>div:nth-child(2)>div>span {
+        margin-top: 15px;
+        margin-bottom: 0;
+    }
+
+    .element-medium-size>a>div:nth-child(2)>div>h3 {
+        margin: 4px 0;
+    }
+
+    .banner,
+    .semi-banner {
+        height: 165px;
+    }
+
+    .element-small-size>a>div:nth-child(2)>div>h4 {
+        margin: 0 auto 20px;
+    }
+
+    .banner {
+        visibility: hidden;
+        position: absolute;
+    }
+
+    .element-m-cont,
+    .element-banner-cont {
+        width: 100%;
+        position: relative;
+    }
+
+    .element-m-img,
+    .element-banner-img {
+        width: 100%;
+        object-fit: fill;
+    }
+
+    #ofertas-grid-1 {
+        grid-template-rows: auto;
+    }
+
+    #ofertas-grid-2 {
+        grid-template-rows: auto;
+    }
+
+    #ofertas-grid-3 {
+        grid-template-rows: auto;
+    }
+
+    .element-small-size {
+        grid-column: auto/span 3;
+        border-radius: 6px;
+    }
+
+    .element-small-size.extended-element {
+        grid-column: auto/span 3;
+    }
+
+    .element-medium-size {
+        grid-column: auto/span 6;
+        border-radius: 0.2em;
+    }
+
+    .banner {
+        grid-column: auto/span 6;
+        border-radius: 6px;
+    }
+
+    .semi-banner {
+        grid-column: auto/span 6;
+        border-radius: 6px;
+    }
+
+    .oferta-element>a>div:nth-child(2)>div>p {
+        position: absolute;
+        visibility: hidden;
+    }
+
+    .link-btn-wrapper {
+        width: 100%;
+    }
+
+    .link-btn {
+        width: 100%;
+    }
+
+    .extra-links {
+        visibility: hidden;
+        position: absolute;
+    }
+
+    footer {
+        margin-top: 40px;
+        padding: 20px 10px;
+    }
+
+    .footer-link-wrapper {
+        visibility: hidden;
+        position: absolute;
+    }
+
+    .footer-data-wrapper {
+        margin-top: 0;
+    }
+
+    .app-link {
+        visibility: visible;
+        position: static;
+    }
+}

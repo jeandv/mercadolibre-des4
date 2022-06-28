@@ -1,9 +1,19 @@
-/* #productos {
-    margin: 50px auto 80px auto;
+#productos {
+    /* height: 100vh; */
+    margin: 40px auto 80px auto;
+}
+
+.tituloSeccion {
+    margin: 20px 0 20px 5em;
+}
+
+.productos {
+    height: 330px;
 }
 
 .example-card {
     max-width: 220px;
+    max-height: 335px;
     box-shadow: none;
     cursor: pointer;
 }
@@ -14,16 +24,24 @@
 }
 
 .example-card:hover {
-    height: 360px;
+    transition: all 500ms;
+    height: 356px;
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);
 }
 
 .example-card:hover .descripcion {
     opacity: 1;
     visibility: visible;
-} */
+}
 
+.example-card img {
+    width: 210px;
+    height: 208px;
+}
 
+.linkTodescription {
+    text-decoration: none;
+}
 
 
 
