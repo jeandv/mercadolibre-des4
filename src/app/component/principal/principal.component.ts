@@ -56,35 +56,35 @@ export class PrincipalComponent {
       ],
       relacionVehiculos: [
         {
-          id: 1,
+          id: 6,
           titulo: 'Auxiliar De Audio Bluetooth X8 Para Reproductor Carro Fm',
           precio: 7,
           tipoEnvio: false,
           imagen: this.imagesProductos[5]
         },
         {
-          id: 2,
+          id: 7,
           titulo: 'Forro Para Carro Toyota Corolla Aveo Optra Lancer Sedan',
           precio: 60,
           tipoEnvio: true,
           imagen: this.imagesProductos[6]
         },
         {
-          id: 3,
+          id: 8,
           titulo: 'Kit Alfombras Tipo Bandeja 4 Piezas Para Carro Oferta',
           precio: 15,
           tipoEnvio: false,
           imagen: this.imagesProductos[7]
         },
         {
-          id: 4,
+          id: 9,
           titulo: 'Correa Aire Acondicionado Volkswagen Fox Crossfox Spacefox',
           precio: 5,
           tipoEnvio: true,
           imagen: this.imagesProductos[8]
         },
         {
-          id: 5,
+          id: 10,
           titulo: 'Forro De Volante Excelente Calidad Tipo Cuero Somos Tienda!',
           precio: 5,
           tipoEnvio: false,
@@ -93,35 +93,35 @@ export class PrincipalComponent {
       ],
       relacionComputacion: [
         {
-          id: 1,
+          id: 11,
           titulo: 'Disco Duro Solido Addlink S20 120gb Ssd 2.5 Sata 3 6gb/s',
           precio: 25,
           tipoEnvio: true,
           imagen: this.imagesProductos[10]
         },
         {
-          id: 2,
+          id: 12,
           titulo: 'Memoria 2gb Ddr2 800 Compatible 667 533 Intel Amd Mac Nueva',
           precio: 10,
           tipoEnvio: false,
           imagen: this.imagesProductos[11]
         },
         {
-          id: 3,
+          id: 13,
           titulo: 'Mouse Optico Usb 1200dpi 3d Cable Laptop Computadora Luz Led',
           precio: 4,
           tipoEnvio: true,
           imagen: this.imagesProductos[12]
         },
         {
-          id: 4,
+          id: 14,
           titulo: 'Cornetas Speaker Pc Escritorio Computadora Laptop Usb 3w',
           precio: 5,
           tipoEnvio: false,
           imagen: this.imagesProductos[13]
         },
         {
-          id: 5,
+          id: 15,
           titulo: 'Tarjeta Madre Arktek H61m Socket 1155 Somos Tienda',
           precio: 85,
           tipoEnvio: true,

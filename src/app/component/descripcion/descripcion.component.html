@@ -8,11 +8,11 @@
     <div class="navDetalles">
         <div>
             <a routerLink="/home">Volver al listado</a>
-            <a href="#">Computación</a>
+            <a href="#">{{producto.categoria}}</a>
             <span class="iconify" data-icon="dashicons:arrow-right-alt2"></span>
-            <a href="#">Accesorios para PC gaming</a>
+            <a href="#">{{producto.seccion}}</a>
             <span class="iconify" data-icon="dashicons:arrow-right-alt2"></span>
-            <a href="#">Audifonos</a>
+            <a href="#">{{producto.tipoProducto}}</a>
         </div>
         <div>
             <a href="#">Compartir</a>
@@ -26,28 +26,28 @@
 
         <div class="imagenesProducto">
             <div>
-                <img src="../assets/images/discoDuro.webp" alt="">
+                <img src={{producto.imagen}} alt="nro-{{producto.id}}-{{producto.titulo}}">
             </div>
             <div>
-                <img src="../assets/images/discoDuro.webp" alt="">
+                <img src={{producto.imagen}} alt="nro-{{producto.id}}-{{producto.titulo}}">
             </div>
             <div>
-                <img src="../assets/images/discoDuro.webp" alt="">
+                <img src={{producto.imagen}} alt="nro-{{producto.id}}-{{producto.titulo}}">
             </div>
         </div>
 
         <div class="imagenProducto">
             <div>
-                <img src="../assets/images/discoDuro.webp" alt="">
+                <img src={{producto.imagen}} alt="nro-{{producto.id}}-{{producto.titulo}}">
             </div>
         </div>
 
         <div class="datosProducto">
             <span class="vendidos">
-                <p>Nuevo | 202 vendidos</p>
+                <p>{{producto.estado}} | {{producto.vendidos}} vendidos</p>
             </span>
             <div class="nombre">
-                <p>Nombre Producto</p>
+                <p>{{producto.titulo}}</p>
                 <span class="iconify deseado" data-icon="arcticons:hearth"></span>
             </div>
             <div class="rate">
@@ -61,18 +61,18 @@
                 <label for="star4" title="4 estrellas">4 stars</label>
                 <input type="radio" id="star5" name="rate" value="5" />
                 <label for="star5" title="5 estrellas">5 star</label>
-                <p>20 opiniones</p>
+                <p>{{producto.opiniones}} opiniones</p>
             </div>
             <div class="precio">
                 <span>
-                    <h3>U$S 20</h3>
+                    <h3>U$S {{producto.precio}}</h3>
                     <span class="iconify ayuda" data-icon="bx:help-circle"></span>
                 </span>
-                <h5>Bs. 12,12</h5>
+                <h5>Bs. {{producto.precio * 5.5}}</h5>
                 <a href="#">Ver los medios de pago</a>
             </div>
             <div class="envio">
-                <span>
+                <span *ngIf="producto.tipoEnvio">
                     <span class="iconify carrito" data-icon="bi:truck"></span>
                     <p>Envío gratis a todo el país</p>
                 </span>
@@ -89,7 +89,7 @@
                         <option value="value3">4 unidad</option>
                         <option value="value3">5 unidad</option>
                     </select>
-                    <span>(5 disponibles)</span>
+                    <span>({{producto.cantidad}} disponibles)</span>
                 </p>
             </div>
             <button class="btnComprar">Comprar ahora</button>
